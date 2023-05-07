@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="">
+    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="" />
       <change afterPath="$PROJECT_DIR$/src/NameSurname.java" afterDir="false" />
-    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="Homework3 Part1">
-      <change afterPath="$PROJECT_DIR$/src/BMI.java" afterDir="false" />
+    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="Homework3 Part3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
       <recent name="C:\Users\anduser\IdeaProjects\TeachMe\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NameSurname">
+  <component name="RunManager" selected="Application.NameSurname"/>
   <component name="RunManager" selected="Application.BMI">
     <configuration name="BMI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BMI" />
@@ -123,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683400304497</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Homework3 Part3">
+      <created>1683405826446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683405826446</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homework3 Part2" />
     <MESSAGE value="Homework3 Part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework3 Part1" />
+    <MESSAGE value="Homework3 Part3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework3 Part3" />
   </component>
 </project>
