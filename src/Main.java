@@ -31,7 +31,6 @@ public class Main {
         int weight = enter.nextInt();
         System.out.println("Your weight is: " + weight);
 
-        enter.close();
     }
 
     public static void getSymbol() {
