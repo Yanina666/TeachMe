@@ -40,6 +40,9 @@ public class Main {
             case 11:
                 System.out.println("Fall");
                 break;
+            default:
+                System.out.println("There is no number");
+                break;
         }
     }
 
