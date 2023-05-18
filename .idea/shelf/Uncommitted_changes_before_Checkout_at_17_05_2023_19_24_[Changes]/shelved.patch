@@ -1,0 +1,232 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\n//. Создайте массив целых чисел. Напишете программу, которая выводит\r\n//сообщение о том, входит ли заданное число в массив или нет.\r\n//Пусть число для поиска задается с консоли (класс Scanner).\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n        //getNumbers();\r\n        //compareNumerals();\r\n       //arrayMaxMinAvg();\r\n        lastTask();\r\n\r\n    }\r\n\r\n    public static void getNumbers() {\r\n\r\n        int[] numbers = new int[]{1, 2, 3, 4, 5};\r\n        Scanner enter = new Scanner(System.in);\r\n        System.out.println(\"Enter number: \");\r\n        int num = enter.nextInt();\r\n\r\n\r\n        {\r\n            for (int i = 0; i < numbers.length; i++)\r\n\r\n                if (i == num) {\r\n                    System.out.println(numbers[num] + \" \");\r\n\r\n                }\r\n        }\r\n\r\n        //1 Создайте массив целых чисел. Удалите все вхождения заданного\r\n        //числа из массива.\r\n        //Пусть число задается с консоли (класс Scanner). Если такого числа нет -\r\n        //выведите сообщения об этом.\r\n        //В результате должен быть новый массив без указанного числа.\r\n    }\r\n\r\n    public static void compareNumerals() {\r\n        Scanner enter = new Scanner(System.in);\r\n        System.out.println(\"Enter some numeral: \");\r\n        int scanner = enter.nextInt();\r\n        int count = 0;\r\n\r\n        int[] numerals = new int[5];\r\n        numerals[0] = 3;\r\n        numerals[1] = 10;\r\n        numerals[2] = 89;\r\n        numerals[3] = 78;\r\n        numerals[4] = 90;\r\n\r\n        int[] numerals2 = new int[numerals.length];\r\n\r\n\r\n        for (int i = 0; i < numerals.length; i++) {\r\n            if (numerals[i] == scanner) {\r\n                count++;\r\n            } else numerals[i - count] = numerals[i];\r\n        }\r\n        if (count == 0) {\r\n            System.out.println(\"There is no such number in the array\");\r\n            return;\r\n        }\r\n        for (int i = 0; i < numerals2.length; i++)\r\n            numerals2[i] = numerals[i];\r\n        for (int i = 0; i < numerals.length - count; i++)\r\n            System.out.print(numerals2[i] + \" \");\r\n    }\r\n\r\n\r\n//Создайте и заполните массив случайным числами и выведете\r\n//максимальное, минимальное и среднее значение.\r\n//Для генерации случайного числа используйте метод Math.random().\r\n//Пусть будет возможность создавать массив произвольного размера.\r\n//Пусть размер массива вводится с консоли.\r\n\r\n    public static void arrayMaxMinAvg() {\r\n        Scanner enter = new Scanner(System.in);\r\n        System.out.println(\"Enter the num: \");\r\n        int n = enter.nextInt();\r\n        int max = 0;\r\n        int min = 0;\r\n        int avg = 0;\r\n\r\n        int[] nums = new int[n];\r\n        for (int i = 0; i < nums.length; i++) {\r\n            nums[i] = (int) (Math.random() * n);\r\n\r\n            for (i = 0; i < nums.length; i++)\r\n                if (max < nums[i])\r\n                    max = nums[i];\r\n                System.out.println(\"Max: \" + max);\r\n\r\n                for (i = 0; i < nums.length; i++)\r\n                    min = nums[0];\r\n            for (i = 0; i < nums.length; i++)\r\n                if (min > nums[i])\r\n                    min = nums[i];\r\n\r\n                System.out.println(\"Min: \" + min);\r\n\r\n                for (i = 0; i < nums.length; i++)\r\n                avg += nums[i] / nums.length;\r\n                System.out.println(\"Average: \" + avg);\r\n\r\n                enter.close();\r\n            }\r\n        }\r\n\r\n//        3 Создайте 2 массива из 5 чисел.\r\n//    Выведите массивы на консоль в двух отдельных строках.\r\n//    Посчитайте среднее арифметическое элементов каждого массива и\r\n//    сообщите, для какого из массивов это значение оказалось больше (либо\r\n//     сообщите, что их средние арифметические равны).\r\n\r\npublic static void lastTask() {\r\n    int[] massive1 = new int[5];\r\n    int[] massive2 = new int[5];\r\n    int m1 =0;\r\n    int m2 =0;\r\n    double a1, a2;\r\n\r\n    for(int i=0; i<massive1.length; i++){\r\n        massive1[i] = (int)(Math.random()*6);\r\n        massive2[i] = (int)(Math.random()*6);\r\n    }\r\n    for(int i=0; i<massive1.length; i++) {\r\n        System.out.print(massive1[i]+\" \");\r\n    }\r\n    System.out.println();\r\n    for(int i=0; i<massive1.length; i++) {\r\n        System.out.print(massive2[i]+\" \");\r\n    }\r\n    for(int i=0; i<massive1.length; i++){\r\n        m1 = massive1[i];\r\n    }\r\n    for(int i=0; i<massive2.length; i++){\r\n        m2 = massive2[i];\r\n    }\r\n    System.out.println();\r\n    a1 = (double)m1/5;\r\n    a2 = (double)m2/5;\r\n    if(a1<a2) {\r\n        System.out.println(\"AVG massive1 < AVG massive2\");\r\n    } else if(a2<a1) {\r\n        System.out.println(\"AVG massive2 < AVG massive1\");\r\n    } else {\r\n        System.out.println(\"AVG massive1 = AVG massive2\");\r\n    }\r\n}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1251
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision d6e520b76ae27ac7e8cfa0b75cad62283c1b323d)
++++ b/src/Main.java	(date 1684339263829)
+@@ -1,152 +1,6 @@
+-import java.util.Scanner;
+-
+-//. Создайте массив целых чисел. Напишете программу, которая выводит
+-//сообщение о том, входит ли заданное число в массив или нет.
+-//Пусть число для поиска задается с консоли (класс Scanner).
+ public class Main {
+-
+-    public static void main(String[] args) {
+-        //getNumbers();
+-        //compareNumerals();
+-       //arrayMaxMinAvg();
+-        lastTask();
+-
+-    }
+-
+-    public static void getNumbers() {
+-
+-        int[] numbers = new int[]{1, 2, 3, 4, 5};
+-        Scanner enter = new Scanner(System.in);
+-        System.out.println("Enter number: ");
+-        int num = enter.nextInt();
+-
+-
+-        {
+-            for (int i = 0; i < numbers.length; i++)
+-
+-                if (i == num) {
+-                    System.out.println(numbers[num] + " ");
+-
+-                }
+-        }
+-
+-        //1 Создайте массив целых чисел. Удалите все вхождения заданного
+-        //числа из массива.
+-        //Пусть число задается с консоли (класс Scanner). Если такого числа нет -
+-        //выведите сообщения об этом.
+-        //В результате должен быть новый массив без указанного числа.
+-    }
+-
+-    public static void compareNumerals() {
+-        Scanner enter = new Scanner(System.in);
+-        System.out.println("Enter some numeral: ");
+-        int scanner = enter.nextInt();
+-        int count = 0;
+-
+-        int[] numerals = new int[5];
+-        numerals[0] = 3;
+-        numerals[1] = 10;
+-        numerals[2] = 89;
+-        numerals[3] = 78;
+-        numerals[4] = 90;
+-
+-        int[] numerals2 = new int[numerals.length];
+-
+-
+-        for (int i = 0; i < numerals.length; i++) {
+-            if (numerals[i] == scanner) {
+-                count++;
+-            } else numerals[i - count] = numerals[i];
+-        }
+-        if (count == 0) {
+-            System.out.println("There is no such number in the array");
+-            return;
+-        }
+-        for (int i = 0; i < numerals2.length; i++)
+-            numerals2[i] = numerals[i];
+-        for (int i = 0; i < numerals.length - count; i++)
+-            System.out.print(numerals2[i] + " ");
+-    }
+-
+-
+-//Создайте и заполните массив случайным числами и выведете
+-//максимальное, минимальное и среднее значение.
+-//Для генерации случайного числа используйте метод Math.random().
+-//Пусть будет возможность создавать массив произвольного размера.
+-//Пусть размер массива вводится с консоли.
+-
+-    public static void arrayMaxMinAvg() {
+-        Scanner enter = new Scanner(System.in);
+-        System.out.println("Enter the num: ");
+-        int n = enter.nextInt();
+-        int max = 0;
+-        int min = 0;
+-        int avg = 0;
+-
+-        int[] nums = new int[n];
+-        for (int i = 0; i < nums.length; i++) {
+-            nums[i] = (int) (Math.random() * n);
+-
+-            for (i = 0; i < nums.length; i++)
+-                if (max < nums[i])
+-                    max = nums[i];
+-                System.out.println("Max: " + max);
+-
+-                for (i = 0; i < nums.length; i++)
+-                    min = nums[0];
+-            for (i = 0; i < nums.length; i++)
+-                if (min > nums[i])
+-                    min = nums[i];
+-
+-                System.out.println("Min: " + min);
+-
+-                for (i = 0; i < nums.length; i++)
+-                avg += nums[i] / nums.length;
+-                System.out.println("Average: " + avg);
+-
+-                enter.close();
+-            }
+-        }
+-
+-//        3 Создайте 2 массива из 5 чисел.
+-//    Выведите массивы на консоль в двух отдельных строках.
+-//    Посчитайте среднее арифметическое элементов каждого массива и
+-//    сообщите, для какого из массивов это значение оказалось больше (либо
+-//     сообщите, что их средние арифметические равны).
+-
+-public static void lastTask() {
+-    int[] massive1 = new int[5];
+-    int[] massive2 = new int[5];
+-    int m1 =0;
+-    int m2 =0;
+-    double a1, a2;
+-
+-    for(int i=0; i<massive1.length; i++){
+-        massive1[i] = (int)(Math.random()*6);
+-        massive2[i] = (int)(Math.random()*6);
+-    }
+-    for(int i=0; i<massive1.length; i++) {
+-        System.out.print(massive1[i]+" ");
+-    }
+-    System.out.println();
+-    for(int i=0; i<massive1.length; i++) {
+-        System.out.print(massive2[i]+" ");
+-    }
+-    for(int i=0; i<massive1.length; i++){
+-        m1 = massive1[i];
+-    }
+-    for(int i=0; i<massive2.length; i++){
+-        m2 = massive2[i];
+-    }
+-    System.out.println();
+-    a1 = (double)m1/5;
+-    a2 = (double)m2/5;
+-    if(a1<a2) {
+-        System.out.println("AVG massive1 < AVG massive2");
+-    } else if(a2<a1) {
+-        System.out.println("AVG massive2 < AVG massive1");
+-    } else {
+-        System.out.println("AVG massive1 = AVG massive2");
+-    }
+-}
++    public static void main(String[] args)
++    {
++        System.out.println("learning git");
++    }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"649e8125-7f63-4866-8b08-aa4fa6cc9a93\" name=\"Changes\" comment=\"commit3\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Ouo5ZKdMWql5NJVbqUmDLqzgwW\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/anduser/IdeaProjects/slipknot&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\anduser\\IdeaProjects\\TeachMe\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"BMI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"BMI\" />\r\n      <module name=\"TeachMe\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"TeachMe\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NameSurname\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"NameSurname\" />\r\n      <module name=\"TeachMe\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NameSurname\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"NameSurname\" />\r\n      <module name=\"TeachMe\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Symbol\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Symbol\" />\r\n      <module name=\"TeachMe\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Symbol\" />\r\n        <item itemvalue=\"Application.NameSurname\" />\r\n        <item itemvalue=\"Application.BMI\" />\r\n        <item itemvalue=\"Application.Symbol\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"649e8125-7f63-4866-8b08-aa4fa6cc9a93\" name=\"Changes\" comment=\"\" />\r\n      <created>1682419645524</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1682419645524</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Homework3 Part1\">\r\n      <created>1683234863686</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683234863686</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Homework3 Part1\">\r\n      <created>1683400304497</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683400304497</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Homework3 Part3\">\r\n      <created>1683405826446</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683405826446</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Homework3 Part3\">\r\n      <created>1683451837948</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683451837948</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Homework3 Veriables\">\r\n      <created>1683452996707</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683452996707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Homework3 Done\">\r\n      <created>1683536687914</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683536687914</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"commit3\">\r\n      <created>1684006657019</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1684006657019</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Homework3 Part2\" />\r\n    <MESSAGE value=\"Homework3 Part1\" />\r\n    <MESSAGE value=\"Homework3 Part3\" />\r\n    <MESSAGE value=\"Homework3 Veriables\" />\r\n    <MESSAGE value=\"Homework3 Done\" />\r\n    <MESSAGE value=\"Homework4\" />\r\n    <MESSAGE value=\"commit3\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"commit3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d6e520b76ae27ac7e8cfa0b75cad62283c1b323d)
++++ b/.idea/workspace.xml	(date 1684340592893)
+@@ -1,8 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commit3">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32__Changes_.xml" afterDir="false" />
++    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commiti3">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+     </list>
+@@ -21,7 +20,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="homework6" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -92,7 +91,7 @@
+         <item itemvalue="Application.Symbol" />
+         <item itemvalue="Application.NameSurname" />
+         <item itemvalue="Application.BMI" />
+-        <item itemvalue="Application.Symbol" />
++        <item itemvalue="Application.Main" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -147,14 +146,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1683536687914</updated>
+     </task>
+-    <task id="LOCAL-00007" summary="commit3">
+-      <created>1684006657019</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1684006657019</updated>
+-    </task>
+-    <option name="localTasksCounter" value="8" />
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -174,8 +166,6 @@
+     <MESSAGE value="Homework3 Part3" />
+     <MESSAGE value="Homework3 Veriables" />
+     <MESSAGE value="Homework3 Done" />
+-    <MESSAGE value="Homework4" />
+-    <MESSAGE value="commit3" />
+-    <option name="LAST_COMMIT_MESSAGE" value="commit3" />
++    <option name="LAST_COMMIT_MESSAGE" value="Homework3 Done" />
+   </component>
+ </project>
+\ No newline at end of file
