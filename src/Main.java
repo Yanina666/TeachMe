@@ -3,17 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        getSeason();
-        returnSeason();
-        evenAndOdd();
-        getTemperature();
-        getRainbowColor();
-        evenAndOdd2();
-        getDecrement();
+        //getSeason();
+        //returnSeason();
+        //evenAndOdd();
+        //getTemperature();
+//        getRainbowColor();
+//        evenAndOdd2();
+ //       getDecrement();
         sumNumbers();
-        getLine();
-        getLine2();
-        getSquare();
+//        getLine();
+//        getLine2();
+//        getSquare();
     }
 
     public static void getSeason() {
@@ -114,9 +114,8 @@ public class Main {
     //1 При помощи цикла for вывести на экран нечетные числа от 1 до 99
     //При решении используйте операцию инкремента (++).
     public static void evenAndOdd2() {
-        int counter = 1;
 
-        for (counter = 1; counter <= 99; counter += 2) {
+        for (int counter = 1; counter <= 99; counter += 2) {
             System.out.println(counter);
         }
     }
@@ -124,9 +123,8 @@ public class Main {
     //2 Необходимо вывести на экран числа от 5 до 1
     //При решении используйте операцию декремента (--).
     public static void getDecrement() {
-        int counter = 5;
 
-        for (counter = 5; counter >= 1; counter--) {
+        for (int counter = 5; counter >= 1; counter--) {
 
             System.out.println(counter);
         }
@@ -183,9 +181,8 @@ public class Main {
         //20 включительно.
 
         public static void getSquare () {
-            int n;
-            for (n = 10; n <= 20; n++) {
-                System.out.println(n * n);
+            for (int n = 10; n <= 20; n++) {
+                System.out.println((int) Math.pow(n, 2));   //возведение в степень
 
             }
         }
