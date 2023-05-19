@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //tripleArray();
-        chessBoard();
+        tripleArray();
+        //chessBoard();
     }
 
     public static void tripleArray() {
@@ -23,7 +23,7 @@ public class Main {
         for (int i = 0; i < three.length; i++) {
             for (int t = 0; t < three[i].length; t++) {
                 for (int d = 0; d < three[i][t].length; d++) {
-                    System.out.print(three[i][t][d] * a + " ");
+                    System.out.print(three[i][t][d] + a + " ");
                 }
                 System.out.println();
             }
