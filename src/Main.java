@@ -146,7 +146,7 @@ public class Main {
         //int i = 0;
 
         if (number >= 0) {
-            for (int num = 1; num <= number; num++) {
+            for (int num = 1; num < number; num++) {
                 sum = sum + num;
             }
                 System.out.println(sum);
