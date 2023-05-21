@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         //getNumbers();
-        //compareNumerals();
-       //arrayMaxMinAvg();
-        lastTask();
+        compareNumerals();
+        //arrayMaxMinAvg();
+        //lastTask();
 
     }
 
@@ -22,51 +22,72 @@ public class Main {
 
 
         {
-            for (int i = 0; i < numbers.length; i++)
+            for (int i = 0; i < numbers.length; i++) {
 
-                if (i == num) {
-                    System.out.println(numbers[num] + " ");
-
+                if (numbers[i] == num) {
+                    System.out.println("Your number is in the array: " + i + ":" + num);
                 }
+            }
         }
-
-        //1 Создайте массив целых чисел. Удалите все вхождения заданного
-        //числа из массива.
-        //Пусть число задается с консоли (класс Scanner). Если такого числа нет -
-        //выведите сообщения об этом.
-        //В результате должен быть новый массив без указанного числа.
     }
 
-    public static void compareNumerals() {
-        Scanner enter = new Scanner(System.in);
-        System.out.println("Enter some numeral: ");
-        int scanner = enter.nextInt();
-        int count = 0;
 
+    //1 Создайте массив целых чисел. Удалите все вхождения заданного
+    //числа из массива.
+    //Пусть число задается с консоли (класс Scanner). Если такого числа нет -
+    //выведите сообщения об этом.
+    //В результате должен быть новый массив без указанного числа.
+
+
+    public static void compareNumerals() {
         int[] numerals = new int[5];
         numerals[0] = 3;
         numerals[1] = 10;
         numerals[2] = 89;
-        numerals[3] = 78;
+        numerals[3] = 3;
         numerals[4] = 90;
 
-        int[] numerals2 = new int[numerals.length];
+        Scanner enter = new Scanner(System.in);
+        System.out.println("Enter some array numbers: ");
+        int scanner = enter.nextInt();
 
+        System.out.print("First array is: ");
+        getFirstArray(numerals);
+
+        System.out.print("\nNew array is: ");
 
         for (int i = 0; i < numerals.length; i++) {
             if (numerals[i] == scanner) {
-                count++;
-            } else numerals[i - count] = numerals[i];
+                continue;
+            }
+            System.out.print(numerals[i] + " ");
         }
-        if (count == 0) {
-            System.out.println("There is no such number in the array");
-            return;
-        }
-        for (int i = 0; i < numerals2.length; i++)
-            numerals2[i] = numerals[i];
-        for (int i = 0; i < numerals.length - count; i++)
-            System.out.print(numerals2[i] + " ");
     }
+
+    public static void getFirstArray(int[] numerals2)
+    {
+        for (int i = 0; i < numerals2.length; i++) {
+            System.out.print(numerals2[i] + " ");
+        }
+    }
+
+
+    //else numerals[i - count] = numerals[i];
+
+//        if (count == 0) {
+//            System.out.println("There is no such number in the array");
+//            return;
+//        }
+//            else {
+//                System.out.println("There is no such number in the array");
+//            }
+//        }
+//        for (int i = 0; i < numerals2.length; i++)
+//            numerals2[i] = numerals[i];
+//        for (int i = 0; i < numerals.length - count; i++)
+//            System.out.print(numerals2[i] + " ");
+//    }
+
 
 
 //Создайте и заполните массив случайным числами и выведете
