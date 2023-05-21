@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         //getNumbers();
-        compareNumerals();
-        //arrayMaxMinAvg();
+        //compareNumerals();
+        arrayMaxMinAvg();
         //lastTask();
 
     }
@@ -72,22 +72,6 @@ public class Main {
     }
 
 
-    //else numerals[i - count] = numerals[i];
-
-//        if (count == 0) {
-//            System.out.println("There is no such number in the array");
-//            return;
-//        }
-//            else {
-//                System.out.println("There is no such number in the array");
-//            }
-//        }
-//        for (int i = 0; i < numerals2.length; i++)
-//            numerals2[i] = numerals[i];
-//        for (int i = 0; i < numerals.length - count; i++)
-//            System.out.print(numerals2[i] + " ");
-//    }
-
 
 
 //Создайте и заполните массив случайным числами и выведете
@@ -102,32 +86,35 @@ public class Main {
         int n = enter.nextInt();
         int max = 0;
         int min = 0;
-        int avg = 0;
+        int sum = 0;
 
         int[] nums = new int[n];
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++)
             nums[i] = (int) (Math.random() * n);
 
-            for (i = 0; i < nums.length; i++)
+        for (int i = 0; i < nums.length; i++)
+            System.out.print(nums[i] + " ");
+
+            for (int i = 0; i < nums.length; i++)
                 if (max < nums[i])
                     max = nums[i];
-                System.out.println("Max: " + max);
+                System.out.println("\nMax: " + max);
 
-                for (i = 0; i < nums.length; i++)
+                for (int i = 0; i < nums.length; i++)
                     min = nums[0];
-            for (i = 0; i < nums.length; i++)
+            for (int i = 0; i < nums.length; i++)
                 if (min > nums[i])
                     min = nums[i];
-
                 System.out.println("Min: " + min);
 
-                for (i = 0; i < nums.length; i++)
-                avg += nums[i] / nums.length;
+                for (int i = 0; i < nums.length; i++)
+                    sum += nums[i];
+                double avg = sum/n;
                 System.out.println("Average: " + avg);
 
                 enter.close();
             }
-        }
+
 
 //        3 Создайте 2 массива из 5 чисел.
 //    Выведите массивы на консоль в двух отдельных строках.
