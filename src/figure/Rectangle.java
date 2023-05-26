@@ -1,24 +1,20 @@
 package figure;
 
 public class Rectangle extends Figure{
-    public double height = 3.5;
-    public double weight = 7.5;
-    public Rectangle(String figureName) {
-        super(figureName);
-    }
-
-    @Override
-    void getRadius() {
-        return;
+    public Rectangle(String figureName, double height, double weight) {
+        this.figureName = figureName;
+        this.area = height * weight;
+        this.perimeter = 2 * (height + weight);
     }
 
     @Override
     double getArea() {
-        return height * weight;
+        return this.area;
     }
 
     @Override
     double getPerimeter() {
-        return 2 * (height + weight);
+        return this.perimeter;
     }
+
 }

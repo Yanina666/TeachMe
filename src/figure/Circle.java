@@ -1,26 +1,20 @@
 package figure;
 
 public class Circle extends Figure{
-    public double p = 3.14;
-    public int radius = 6;
-
-
-    public Circle(String figureName) {
-        super(figureName);
-    }
-
-    @Override
-    void getRadius() {
-        return;
+    public Circle(String figureName, double radius) {
+        this.figureName= figureName;
+        this.area = 3.14 * (radius*radius);
+        this.perimeter = 2 * radius * 3.14;
     }
 
     @Override
     double getArea() {
-        return Math.round((radius*radius) * p);
+        return this.area;
     }
 
     @Override
     double getPerimeter() {
-        return 2 * radius * p;
+        return this.perimeter;
     }
+
 }

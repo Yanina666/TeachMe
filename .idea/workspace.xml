@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commit13" />
+    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commit14">
+      <change afterPath="$PROJECT_DIR$/src/Employee/Accounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Employee/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Employee/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Employee/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09_05_2023_22_32__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figure/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figure/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figure/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figure/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figure/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figure/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figure/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figure/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figure/Triangle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,9 +61,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.figure.Main">
-    <configuration name="BMI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BMI" />
+    <configuration name="Employee.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Employee.Main" />
       <module name="TeachMe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,10 +118,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.figure.Main" />
+        <item itemvalue="Application.Employee.Main" />
         <item itemvalue="Application.Symbol" />
         <item itemvalue="Application.NameSurname" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.BMI" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684996312568</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit14">
+      <created>1684998025531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684998025531</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +219,7 @@
     <MESSAGE value="Homework3 Done" />
     <MESSAGE value="commit12" />
     <MESSAGE value="commit13" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit13" />
+    <MESSAGE value="commit14" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit14" />
   </component>
 </project>
