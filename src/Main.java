@@ -32,7 +32,7 @@ public class Main {
 
         System.out.print("Enter the first phone number: ");
         firstPhone.number= Phone.getNum();
-        firstPhone.receiveCall();
+        firstPhone.receiveCall("Kate");
         System.out.print("Enter the model: ");
         firstPhone.model = Phone.getModel();
         System.out.print("Enter the weight: ");
@@ -40,7 +40,7 @@ public class Main {
 
         System.out.print("Enter the second phone number: ");
         secondPhone.number= Phone.getNum();
-        secondPhone.receiveCall();
+        secondPhone.receiveCall2("John");
         System.out.print("Enter the model: ");
         secondPhone.model = Phone.getModel();
         System.out.print("Enter the weight: ");
@@ -48,7 +48,7 @@ public class Main {
 
         System.out.print("Enter the third phone number: ");
         thirdPhone.number= Phone.getNum();
-        thirdPhone.receiveCall();
+        thirdPhone.receiveCall3("Lina");
         System.out.print("Enter the model: ");
         thirdPhone.model = Phone.getModel();
         System.out.print("Enter the weight: ");
@@ -64,17 +64,16 @@ public class Main {
                 ", with weight: " + thirdPhone.weight);
 
         System.out.println();
-        firstPhone.receiveCall();
+        firstPhone.receiveCall("Kate");
         firstPhone.getNumber();
 
-        System.out.println();
-        secondPhone.receiveCall();
+        secondPhone.receiveCall2("John");
         secondPhone.getNumber();
 
-        System.out.println();
-        thirdPhone.receiveCall();
+        thirdPhone.receiveCall3("Lina");
         thirdPhone.getNumber();
 
+        System.out.println();
         Phone.sendMessage(firstPhone.number, secondPhone.number, thirdPhone.number);
     }
 }
