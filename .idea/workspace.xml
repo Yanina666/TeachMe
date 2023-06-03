@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commit19">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/Authorize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/WrongLoginException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/WrongPasswordException.java" afterDir="false" />
+    <list default="true" id="649e8125-7f63-4866-8b08-aa4fa6cc9a93" name="Changes" comment="commit20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Phone/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Phone/Phone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685305599409</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit20">
+      <created>1685428985296</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685428985296</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +217,7 @@
     <MESSAGE value="commit17" />
     <MESSAGE value="commit18" />
     <MESSAGE value="commit19" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit19" />
+    <MESSAGE value="commit20" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit20" />
   </component>
 </project>
